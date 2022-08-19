@@ -1,5 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<% @article.photos.each do |photo| %>
+<%# if @article.photo.attached? %>
+  <%= cl_image_tag photo.key, height: 300, width: 600, crop: :fill %>
+  <%# @article.photo.purge  %>
+<%# else %>
+  <%# <h3>Add a photo to your article!</h3> %>
+<%# end %>
+  <%# raise %>
+  <% end %>
 <%= render @article %>
 
 <div>
